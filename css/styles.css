@@ -562,9 +562,15 @@ input[name='subscribe-mail'] {
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 input[name='subscribe-mail']:focus {
   cursor: auto;
+  outline: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
 }
 .subscribe-footer {
   display: flex;
@@ -580,6 +586,12 @@ input[name='subscribe-mail']:focus {
   border-radius: 4px;
 
   cursor: pointer;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscribe-footer:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
 }
 /*.subscribe-footer::after {
   display: block;
@@ -593,6 +605,7 @@ input[name='subscribe-mail']:focus {
   width: 24px;
   height: 24px;
   margin-left: 10px;
+  fill: #fff;
 }
 /*======footer style ends===*/
 
@@ -826,8 +839,17 @@ input[name='subscribe-mail']:focus {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-}
+  padding-left: 50px;
 
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input:focus {
+  cursor: pointer;
+  border: 1px solid var(--accent-color);
+  outline: none;
+}
 .comment {
   height: auto;
   padding: 0;
@@ -854,6 +876,14 @@ input[name='subscribe-mail']:focus {
 
   fill: currentColor;
   background-size: contain;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modalform-ithem:focus-within > .icon-invite {
+  fill: var(--accent-color);
 }
 
 input[type='checkbox'] {
@@ -890,6 +920,11 @@ input[type='checkbox'] {
   border-radius: 2px;
   background-size: contain;
   fill: var(--primary-text-color);
+  cursor: pointer;
+
+  transition-property: background-color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 input[type='checkbox']:checked + .check-box {
   background-color: var(--accent-color);
@@ -899,4 +934,31 @@ input[type='checkbox']:checked + .check-box {
   background-origin: border-box;
 
   fill: #fff;
+}
+.btn-send {
+  width: 200px;
+  height: 50px;
+  background-color: var(--accent-color);
+  margin-top: 30px;
+  color: #fff;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition-property: background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-send:hover {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.subscribe-footer + span {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+
+  text-align: center;
+  letter-spacing: 0.06em;
 }
