@@ -877,12 +877,10 @@ input[type='checkbox'] {
   padding-left: 10px;
 
   color: var(--primary-text-color);
+
+  appearance: none;
 }
 .check-box {
-  /*position: absolute;
-  top: 20px;
-  left: 20px;*/
-
   display: block;
   margin-right: 9px;
   width: 16px;
@@ -896,8 +894,9 @@ input[type='checkbox'] {
 input[type='checkbox']:checked + .check-box {
   background-color: var(--accent-color);
   border: 2px solid var(--accent-color);
-  background-image: url('/images/check.svg');
+  background-image: url('/images/full-check.svg');
   background-size: contain;
+  background-origin: border-box;
 
   fill: #fff;
 }
