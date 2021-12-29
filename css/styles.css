@@ -827,19 +827,12 @@ input[name='subscribe-mail']:focus {
   box-sizing: border-box;
   border-radius: 4px;
 }
-.forms-checkbox {
-  display: flex;
-
-  padding: 20px 25px;
-  width: 100%;
-}
 
 .comment {
   height: auto;
   padding: 0;
 }
 .forms-ithems {
-  font-size: 14px;
   margin-bottom: 5px;
   font-size: 12px;
   line-height: 1.16;
@@ -847,7 +840,10 @@ input[name='subscribe-mail']:focus {
 
   color: #757575;
 }
-
+.forms-checkbox > .forms-ithems {
+  font-size: 14px;
+  margin-bottom: 0;
+}
 .icon-invite {
   position: absolute;
   bottom: 11px;
@@ -873,8 +869,13 @@ input[type='checkbox'] {
 
 .forms-checkbox {
   position: relative;
+  margin-top: 20px;
   display: flex;
-  align-items: baseline;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+
   color: var(--primary-text-color);
 }
 .check-box {
@@ -885,13 +886,18 @@ input[type='checkbox'] {
   display: block;
   margin-right: 9px;
   width: 16px;
-  height: 16px;
-  background-color: aquamarine;
+  height: 15px;
+  background-color: #fff;
   border: 2px solid var(--primary-text-color);
   border-radius: 2px;
   background-size: contain;
   fill: var(--primary-text-color);
 }
 input[type='checkbox']:checked + .check-box {
-  background-color: yellow;
+  background-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  background-image: url('/images/check.svg');
+  background-size: contain;
+
+  fill: #fff;
 }
