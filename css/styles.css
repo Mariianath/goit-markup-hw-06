@@ -561,6 +561,10 @@ input[name='subscribe-mail'] {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: #fff;
+  cursor: pointer;
+}
+input[name='subscribe-mail']:focus {
+  cursor: auto;
 }
 .subscribe-footer {
   display: flex;
@@ -574,14 +578,21 @@ input[name='subscribe-mail'] {
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+
+  cursor: pointer;
 }
-.subscribe-footer::after {
+/*.subscribe-footer::after {
   display: block;
   content: '';
   margin-left: 10px;
   background-color: white;
   width: 24px;
   height: 24px;
+}*/
+.footer-mailing {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
 }
 /*======footer style ends===*/
 
@@ -782,7 +793,17 @@ input[name='subscribe-mail'] {
 .cross:hover {
   color: var(--accent-color);
 }
+.modal-invite {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
 
+  margin-bottom: 12px;
+
+  color: #212121;
+}
 .modal-form {
   display: flex;
 
@@ -790,11 +811,87 @@ input[name='subscribe-mail'] {
   align-items: center;
 }
 .modalform-ithem {
+  position: relative;
   display: flex;
   flex-direction: column-reverse;
   width: 100%;
-  margin-top: 10px;
+  color: var(--primary-text-color);
+}
+.modalform-ithem:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.modal-input {
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.forms-checkbox {
+  display: flex;
+
+  padding: 20px 25px;
+  width: 100%;
+}
+
+.comment {
+  height: auto;
+  padding: 0;
 }
 .forms-ithems {
+  font-size: 14px;
   margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: #757575;
+}
+
+.icon-invite {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+
+  width: 18px;
+  height: 18px;
+
+  fill: currentColor;
+  background-size: contain;
+}
+
+input[type='checkbox'] {
+  border: 0;
+  appearance: none;
+}
+
+.terms {
+  text-decoration: underline;
+  color: var(--accent-color);
+  /*border-bottom: 1px solid var(--accent-color);*/
+}
+
+.forms-checkbox {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  color: var(--primary-text-color);
+}
+.check-box {
+  /*position: absolute;
+  top: 20px;
+  left: 20px;*/
+
+  display: block;
+  margin-right: 9px;
+  width: 16px;
+  height: 16px;
+  background-color: aquamarine;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+  background-size: contain;
+  fill: var(--primary-text-color);
+}
+input[type='checkbox']:checked + .check-box {
+  background-color: yellow;
 }

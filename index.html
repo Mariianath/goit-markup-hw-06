@@ -371,27 +371,41 @@
                 <svg  class="cross-btn">
                  <use href="./images/cross.svg#cross"></use>
                  </svg></button>
+
+
+                 
                  <h1 class="modal-invite">Оставьте свои данные, мы вам перезвоним</h1>
             <form class="modal-form">
                 <label class="modalform-ithem"> 
-                    <input type="text" name="username" autofocus placeholder=" ">
+                    <input class="modal-input" type="text" name="username" autofocus placeholder=" ">
+                    <svg class="icon-invite">
+                        <use href='./images/icons.svg#icon-person'></use>
+                    </svg>
                     <span class="forms-ithems">Имя</span>
                 </label>
                 <label class="modalform-ithem">
-                    <input type="tel" name="usernumber" placeholder=" ">
+                    <input class="modal-input" type="tel" name="usernumber" placeholder=" ">
+                    <svg class="icon-invite">
+                        <use href='./images/icons.svg#icon-telephone'></use>
+                    </svg>
                     <span class="forms-ithems">Телефон</span>
                 </label>
                 <label class="modalform-ithem"> 
-                    <input type="email" name="usermail" placeholder=" ">
+                    <input class="modal-input" type="email" name="usermail" placeholder=" ">
+                    <svg class="icon-invite">
+                        <use href='./images/sprite.svg#icon-envelope'></use>
+                    </svg>
+
                     <span class="forms-ithems">Почта</span>
                 </label >
                 <label class="modalform-ithem"> 
-                    <textarea name="feedback" rows="6" placeholder="Введите комментарий"></textarea>
+                    <textarea class="modal-input comment" name="feedback" rows="6" placeholder="Введите комментарий"></textarea>
                 <span class="forms-ithems">Комментарий</span>
                 </label>
-                <label class="modalform-ithem"> 
-                    <input type="checkbox" name="useragree" placeholder=" ">
-                    <span>Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></span>
+                <label class="forms-checkbox"> 
+                    <input type="checkbox" name="useragree" placeholder=" " >
+                    <span class="check-box"></span>
+                    <span class="forms-ithems">Соглашаюсь с рассылкой и принимаю <a href="#" class="terms">Условия договора</a></span>
                 </label >
                 <button type="submit" class="btn-send">Отправить
 
