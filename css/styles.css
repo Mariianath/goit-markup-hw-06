@@ -577,7 +577,7 @@ input[name='subscribe-mail']:focus {
   align-items: center;
   justify-content: center;
   width: 200px;
-  margin-left: 40px;
+  margin-left: 12px;
   padding: 10px 29px;
 
   background-color: var(--accent-color);
@@ -803,8 +803,10 @@ input[name='subscribe-mail']:focus {
   max-width: 18px;
 }
 
-.cross:hover {
+.cross:hover,
+.cross:focus {
   color: var(--accent-color);
+  outline: none;
 }
 .modal-invite {
   font-weight: bold;
@@ -829,9 +831,11 @@ input[name='subscribe-mail']:focus {
   flex-direction: column-reverse;
   width: 100%;
   color: var(--primary-text-color);
-}
-.modalform-ithem:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.modalform-ithem:nth-child(4) {
+  margin-bottom: 20px;
 }
 
 .modal-input {
@@ -853,7 +857,9 @@ input[name='subscribe-mail']:focus {
 .comment {
   height: auto;
   padding: 0;
+  resize: none;
 }
+
 .forms-ithems {
   margin-bottom: 5px;
   font-size: 12px;
@@ -899,7 +905,7 @@ input[type='checkbox'] {
 
 .forms-checkbox {
   position: relative;
-  margin-top: 20px;
+  /*margin-top: 20px;*/
   display: flex;
   width: 100%;
   margin-left: auto;
@@ -926,14 +932,19 @@ input[type='checkbox'] {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 input[type='checkbox']:checked + .check-box {
   background-color: var(--accent-color);
   border: 2px solid var(--accent-color);
-  background-image: url('/images/full-check.svg');
+  background-image: url('../images/full-check.svg');
   background-size: contain;
+  background-repeat: no-repeat;
   background-origin: border-box;
 
   fill: #fff;
+}
+input[type='checkbox']:focus + .check-box {
+  border-color: var(--accent-color);
 }
 .btn-send {
   width: 200px;
