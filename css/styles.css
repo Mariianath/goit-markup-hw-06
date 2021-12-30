@@ -576,12 +576,14 @@ input[name='subscribe-mail']:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
+  /*width: 200px;*/
   margin-left: 12px;
   padding: 10px 29px;
 
+  color: #fff;
+  outline: none;
   background-color: var(--accent-color);
-  background: #2196f3;
+  border-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 
@@ -593,23 +595,21 @@ input[name='subscribe-mail']:focus {
 .subscribe-footer:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
 }
-/*.subscribe-footer::after {
+.subscribe-footer::after {
   display: block;
   content: '';
   margin-left: 10px;
-  background-color: white;
+
+  background-image: url('../images/icon-send.svg');
+  background-size: contain;
   width: 24px;
   height: 24px;
-}*/
-.footer-mailing {
-  width: 24px;
-  height: 24px;
-  margin-left: 10px;
-  fill: #fff;
 }
+
 /*======footer style ends===*/
 
 /*=====Portfolio starts====*/
+
 .works-container {
   padding-top: 94px;
   padding-bottom: 94px;
